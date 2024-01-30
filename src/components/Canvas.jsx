@@ -22,6 +22,9 @@ function Canvas() {
         const minY = Math.min(y1, y2);
         const maxY = Math.max(y1, y2);
 
+        x = x / state.scale - state.panOffset.x;
+        y = y / state.scale - state.panOffset.y;
+
         console.log(x >= minX && x <= maxX && y >= minY && y <= maxY);
         return x >= minX && x <= maxX && y >= minY && y <= maxY;
     }
