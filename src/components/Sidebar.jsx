@@ -36,60 +36,60 @@ function Sidebar() {
         <section className='absolute left-10 top-1/2 rounded-md flex flex-col justify-start items-center p-2 bg-[#444] border py-2 translate-y-[-50%] translate-x-[-50%]'>
             <div className='flex flex-col items-center h-full w-11/12 gap-4'>
                 <label
-                    className='flex items-center justify-center cursor-pointer text-white'
+                    className='flex items-center justify-center cursor-pointer text-white hover:text-green-500'
                     onClick={() => {
                         setIsSelecting(!isSelecting);
                         setIsPanning(false);
                     }}
                 >
-                    <LuMousePointer2 className={`text-2xl ${isSelecting && 'text-cyan-500'}`} />
+                    <LuMousePointer2 className={`text-2xl ${isSelecting && 'text-green-500'}`} />
                 </label>
                 <label
-                    className='flex items-center justify-center cursor-pointer text-white'
+                    className='flex items-center justify-center cursor-pointer text-white  hover:text-green-500'
                     onClick={() => {
                         setIsPanning(!isPanning);
                         setIsSelecting(false);
                     }}
                 >
-                    <PiHandGrabbingLight className={`text-3xl ${isPanning && 'text-cyan-500'}`} />
+                    <PiHandGrabbingLight className={`text-3xl ${isPanning && 'text-green-500'}`} />
                 </label>
                 <label
-                    className='flex items-center justify-center cursor-pointer text-white'
+                    className='flex items-center justify-center cursor-pointer text-white  hover:text-green-500'
                     onClick={() => zoom(0.1)}
                 >
                     <FiZoomIn className='text-3xl' />
                 </label>
-                <span className='flex items-center justify-center cursor-pointer text-white select-none text-center'
+                <span className='flex items-center justify-center cursor-pointer text-white select-none text-center  hover:text-green-500'
                     onClick={() => setScale(1)}
                 >
                     {scale}x
                 </span>
                 <label
-                    className='flex items-center justify-center cursor-pointer text-white'
+                    className='flex items-center justify-center cursor-pointer text-white hover:text-green-500'
                     onClick={() => zoom(-0.1)}
                 >
                     <FiZoomOut className='text-3xl' />
                 </label>
-                <label className='flex items-center justify-center cursor-pointer text-white'>
+                <label className='flex items-center justify-center cursor-pointer text-white hover:text-green-500'>
                     <CiImageOn className='text-3xl' />
                     <input className='hidden' type="file" accept='image/*' onChange={(e) => handleSelectImage(e.target.files[0])} />
                 </label>
 
-                <div className='flex flex-col items-center justify-center cursor-pointer text-white select-none text-center border px-1 rounded gap-1'>
+                <div className='flex flex-col items-center justify-center cursor-text text-white select-none text-center border px-1 rounded gap-1 hover:text-green-500'>
                     <span>x1</span>
-                    <span> {selectedElement?.x1}</span>
+                    <span className='select-text'> {selectedElement?.x1}</span>
                 </div>
-                <div className='flex flex-col items-center justify-center cursor-pointer text-white select-none text-center  border px-1 rounded gap-1'>
+                <div className='flex flex-col items-center justify-center cursor-text text-white select-none text-center  border px-1 rounded gap-1  hover:text-green-500'>
                     <span>y1</span>
-                    <span> {selectedElement?.y1}</span>
+                    <span className='select-text'> {selectedElement?.y1}</span>
                 </div>
-                <div className='flex flex-col items-center justify-center cursor-pointer text-white select-none text-center  border px-1 rounded gap-1'>
+                <div className='flex flex-col items-center justify-center cursor-text text-white select-none text-center  border px-1 rounded gap-1 hover:text-green-500'>
                     <span>x2</span>
-                    <span> {selectedElement?.x2}</span>
+                    <span className='select-text'> {selectedElement?.x2}</span>
                 </div>
-                <div className='flex flex-col items-center justify-center cursor-pointer text-white select-none text-center  border px-1 rounded gap-1'>
+                <div className='flex flex-col items-center justify-center cursor-text text-white select-none text-center  border px-1 rounded gap-1 hover:text-green-500'>
                     <span>y2</span>
-                    <span> {selectedElement?.y2}</span>
+                    <span className='select-text'> {selectedElement?.y2}</span>
                 </div>
             </div>
         </section>

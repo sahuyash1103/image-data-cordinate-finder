@@ -121,7 +121,7 @@ function Canvas() {
 
         context.translate(state.panOffset.x * state.scale - scaleOffsetX, state.panOffset.y * state.scale - scaleOffsetY);
         context.scale(state.scale, state.scale);
-        context.strokeStyle = 'red';
+        context.strokeStyle = 'green';
 
         if (state.imageData)
             context.drawImage(state.imageData.img, 0, 0);
